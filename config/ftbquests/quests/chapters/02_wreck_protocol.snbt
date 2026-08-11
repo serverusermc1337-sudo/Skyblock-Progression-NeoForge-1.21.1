@@ -1,0 +1,36 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "02_wreck_protocol"
+	group: "wrecks"
+	icon: {
+		id: "minecraft:spyglass"
+	}
+	id: "02_wreck_protocol"
+	order_index: 2
+	images: [
+		{
+			image: "suspended_engine:textures/quest/backgrounds/bg_wreck_protocol.png"
+			x: 3.0d
+			y: 0.0d
+			width: 22.0d
+			height: 12.0d
+			rotation: 0.0d
+		}
+	]
+	quest_links: [ ]
+	quests: [
+		{
+			id: "wp01_open"
+			title: "Wreck Protocol"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Exploration is docking, not walking."
+				"Scan, approach, scavenge, return."
+			]
+			icon: { id: "minecraft:map" }
+			tasks: [ { id: "wp01_t", type: "checkmark" } ]
+		}
+	]
+}

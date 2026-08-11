@@ -8,6 +8,16 @@
 	}
 	id: "00_cold_start"
 	order_index: 0
+	images: [
+		{
+			image: "suspended_engine:textures/quest/backgrounds/bg_cold_start.png"
+			x: 4.5d
+			y: 0.0d
+			width: 22.0d
+			height: 12.0d
+			rotation: 0.0d
+		}
+	]
 	quest_links: [ ]
 	quests: [
 		{
@@ -33,7 +43,6 @@
 			description: [
 				"The logbook is the only intact system."
 				"Use this quest book as the deck manual."
-				"It will teach you how to keep the hull in the air."
 			]
 			icon: { id: "minecraft:writable_book" }
 			tasks: [ { id: "cs02_t", type: "checkmark" } ]
@@ -45,7 +54,7 @@
 			y: 0.0d
 			dependencies: ["cs02_logbook"]
 			description: [
-				"Find the levitation core at deck center (lodestone placeholder)."
+				"Find the levitation core at deck center."
 				"It is inert. Farming can wait. Power cannot."
 			]
 			icon: { id: "minecraft:lodestone" }
@@ -59,7 +68,6 @@
 			dependencies: ["cs03_inspect_core"]
 			description: [
 				"Feed the core anything it will accept."
-				"Hand power, scrap burn, or a tiny kinetic trickle."
 				"Status should leave BLACKOUT."
 			]
 			icon: { id: "minecraft:redstone" }
@@ -74,7 +82,7 @@
 			dependencies: ["cs04_minimal_power"]
 			description: [
 				"When power dips, the deck complains."
-				"Learn the warning. CRITICAL means stop expanding and feed the core."
+				"CRITICAL means stop expanding and feed the core."
 			]
 			icon: { id: "minecraft:bell" }
 			tasks: [ { id: "cs05_t", type: "checkmark" } ]

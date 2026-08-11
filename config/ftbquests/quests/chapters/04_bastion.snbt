@@ -1,0 +1,36 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "04_bastion"
+	group: "bastion"
+	icon: {
+		id: "minecraft:netherite_block"
+	}
+	id: "04_bastion"
+	order_index: 4
+	images: [
+		{
+			image: "suspended_engine:textures/quest/backgrounds/bg_bastion.png"
+			x: 3.0d
+			y: 0.0d
+			width: 22.0d
+			height: 12.0d
+			rotation: 0.0d
+		}
+	]
+	quest_links: [ ]
+	quests: [
+		{
+			id: "ba01_open"
+			title: "Bastion"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"We did not find land."
+				"We became the land."
+			]
+			icon: { id: "minecraft:beacon" }
+			tasks: [ { id: "ba01_t", type: "checkmark" } ]
+		}
+	]
+}
