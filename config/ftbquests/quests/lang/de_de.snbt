@@ -1,0 +1,132 @@
+{
+	# Suspended Engine — German translations
+	# Chapter groups
+	chapter_group.cold_start: "Kaltstart"
+	chapter_group.stabilize: "Stabilisieren"
+	chapter_group.wrecks: "Wrack-Protokoll"
+	chapter_group.industry: "Industrie in der Luft"
+	chapter_group.bastion: "Bastion"
+
+	# Chapters
+	chapter.00_cold_start.title: "Kaltstart"
+	chapter.01_stabilize.title: "Stabilisieren"
+	chapter.02_wreck_protocol.title: "Wrack-Protokoll"
+	chapter.03_industry_afloat.title: "Industrie in der Luft"
+	chapter.04_bastion.title: "Bastion"
+
+	# ===== Cold Start =====
+	quest.cs01_wake.title: "Auf dem Deck erwachen"
+	quest.cs01_wake.quest_desc: [
+		"Das ist keine Insel."
+		"Das ist Engine Deck 0 — ein Rumpf-Fragment, das immer noch glaubt, fliegen zu können."
+		"Stirbt der Kern, fällst du."
+	]
+
+	quest.cs02_logbook.title: "Das Logbuch öffnen"
+	quest.cs02_logbook.quest_desc: [
+		"Das Logbuch ist das einzige intakte System."
+		"Nutze dieses Questbuch als Deck-Handbuch."
+		"Es zeigt dir, wie du den Rumpf in der Luft hältst."
+	]
+
+	quest.cs03_inspect_core.title: "Den Kern untersuchen"
+	quest.cs03_inspect_core.quest_desc: [
+		"Finde den Levitationkern in der Deckmitte (Lodestone-Platzhalter)."
+		"Er ist tot. Farmen kann warten. Energie nicht."
+	]
+
+	quest.cs04_minimal_power.title: "Minimale Leistung"
+	quest.cs04_minimal_power.quest_desc: [
+		"Speise den Kern mit allem, was er annimmt."
+		"Handkurbel, Schrottbrand oder ein winziger kinetischer Fluss."
+		"Der Status muss BLACKOUT verlassen."
+	]
+
+	quest.cs05_first_warning.title: "Erste Warnung"
+	quest.cs05_first_warning.quest_desc: [
+		"Wenn die Leistung sinkt, beschwert sich das Deck."
+		"Lerne die Warnung. CRITICAL heißt: nicht erweitern, den Kern speisen."
+	]
+
+	quest.cs06_secure_rim.title: "Den Rand sichern"
+	quest.cs06_secure_rim.quest_desc: [
+		"Die meisten Crews sterben durch die Leere, nicht durch Stromausfall."
+		"Baue einen sicheren Rand um Engine Deck 0."
+	]
+
+	quest.cs07_life_support.title: "Lebenserhaltung"
+	quest.cs07_life_support.quest_desc: [
+		"Halte den Pflanzkübel am Leben."
+		"Ein Baum ist Brennstoff, Blöcke und späteres Werkzeug."
+	]
+
+	# ===== Stabilize =====
+	quest.st01_dedicated_feed.title: "Dedizierte Zufuhr"
+	quest.st01_dedicated_feed.quest_desc: [
+		"Hör auf, den Kern in Panik zu füttern."
+		"Baue eine eigene Leistungsleitung: Kurbel, Brand oder kinetische Linie zum Kern."
+	]
+
+	quest.st02_stable_state.title: "Stabiler Zustand"
+	quest.st02_stable_state.quest_desc: [
+		"Halte STABLE lange genug, um arbeiten zu können."
+		"Wenn dein Statussystem läuft, erreiche den stabilen Schwellenwert."
+		"In Phase 0 reicht: die Zufuhr läuft ohne ständiges Babysitting."
+	]
+
+	quest.st03_deck_storage.title: "Deck-Lager"
+	quest.st03_deck_storage.quest_desc: [
+		"Installiere echtes Lager an Bord."
+		"Eine stabile Crew lebt nicht aus der Startertruhe."
+	]
+
+	quest.st04_docking_tool.title: "Andock-Haken"
+	quest.st04_docking_tool.quest_desc: [
+		"Stelle das Andock-Werkzeug her oder nimm den Platzhalter für Wrack-Interaktion."
+		"Platzhalter: Fernglas / Leine, bis ein echtes Item existiert."
+	]
+
+	quest.st05_wreck_scan.title: "Erstes Wrack scannen"
+	quest.st05_wreck_scan.quest_desc: [
+		"Etwas funkt hinter dem Horizont."
+		"Markiere das erste Wrack-Signal. Nicht andocken, wenn der Status CRITICAL ist."
+	]
+
+	quest.st06_dock_clean.title: "Andocken ohne Brownout"
+	quest.st06_dock_clean.quest_desc: [
+		"Nähere dich dem Wrack mit STABLE-Leistung."
+		"Bei Brownout mitten im Manöver: abbrechen und den Kern wiederherstellen."
+	]
+
+	quest.st07_scavenge.title: "Die Kiste bergen"
+	quest.st07_scavenge.quest_desc: [
+		"Hol die Wrack-Kiste."
+		"Rumpfplatten und Kernfragmente zählen mehr als zufälliger Schrott."
+	]
+
+	quest.st08_return.title: "Zurück zu Deck 0"
+	quest.st08_return.quest_desc: [
+		"Bring die Bergung nach Hause."
+		"Eine Crew, die nicht zurückkehrt, ist nur ein weiteres Wrack."
+	]
+
+	# ===== Wreck Protocol =====
+	quest.wp01_open.title: "Wrack-Protokoll"
+	quest.wp01_open.quest_desc: [
+		"Erkundung heißt Andocken, nicht Laufen."
+		"Scannen, annähern, bergen, zurückkehren."
+	]
+
+	# ===== Industry Afloat =====
+	quest.ia01_open.title: "Industrie in der Luft"
+	quest.ia01_open.quest_desc: [
+		"Fabriken, die nur laufen, solange das Deck STABLE ist."
+	]
+
+	# ===== Bastion =====
+	quest.ba01_open.title: "Bastion"
+	quest.ba01_open.quest_desc: [
+		"Wir haben kein Land gefunden."
+		"Wir sind das Land geworden."
+	]
+}

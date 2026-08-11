@@ -1,3 +1,37 @@
 {
-	# Optional translation overrides. Primary text lives in chapter SNBT files for the skeleton.
+	# Suspended Engine — English reference keys (optional overrides)
+	# Primary text also lives in chapter SNBT files.
+
+	chapter_group.cold_start: "Cold Start"
+	chapter_group.stabilize: "Stabilize"
+	chapter_group.wrecks: "Wreck Protocol"
+	chapter_group.industry: "Industry Afloat"
+	chapter_group.bastion: "Bastion"
+
+	chapter.00_cold_start.title: "Cold Start"
+	chapter.01_stabilize.title: "Stabilize"
+	chapter.02_wreck_protocol.title: "Wreck Protocol"
+	chapter.03_industry_afloat.title: "Industry Afloat"
+	chapter.04_bastion.title: "Bastion"
+
+	quest.cs01_wake.title: "Wake on the Deck"
+	quest.cs02_logbook.title: "Open the Logbook"
+	quest.cs03_inspect_core.title: "Inspect the Core"
+	quest.cs04_minimal_power.title: "Minimal Power"
+	quest.cs05_first_warning.title: "First Warning"
+	quest.cs06_secure_rim.title: "Secure the Rim"
+	quest.cs07_life_support.title: "Life Support"
+
+	quest.st01_dedicated_feed.title: "Dedicated Feed"
+	quest.st02_stable_state.title: "Stable State"
+	quest.st03_deck_storage.title: "Deck Storage"
+	quest.st04_docking_tool.title: "Docking Hook"
+	quest.st05_wreck_scan.title: "Scan the First Wreck"
+	quest.st06_dock_clean.title: "Dock Without Brownout"
+	quest.st07_scavenge.title: "Scavenge the Crate"
+	quest.st08_return.title: "Return to Deck 0"
+
+	quest.wp01_open.title: "Wreck Protocol"
+	quest.ia01_open.title: "Industry Afloat"
+	quest.ba01_open.title: "Bastion"
 }
