@@ -1,0 +1,45 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "01_basic_loop"
+	group: "resources"
+	icon: { id: "minecraft:cobblestone" }
+	id: "01_basic_loop"
+	order_index: 1
+	quest_links: []
+	quests: [
+		{
+			id: "cobble_loop"
+			title: "Cobble Loop"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Establish a reliable cobblestone source."
+				"This is the backbone of early skyblock."
+			]
+			icon: { id: "minecraft:cobblestone" }
+			tasks: [{ id: "cobble_task", type: "item", item: { id: "minecraft:cobblestone" }, count: 64 }]
+			rewards: [{ id: "cobble_reward", type: "item", item: { id: "minecraft:torch", count: 16 } }]
+		}
+		{
+			id: "water_control"
+			title: "Water Control"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["cobble_loop"]
+			description: ["Secure infinite water and start controlled farming or generation setups."]
+			icon: { id: "minecraft:water_bucket" }
+			tasks: [{ id: "water_task", type: "checkmark" }]
+		}
+		{
+			id: "first_furnace"
+			title: "First Furnace"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["water_control"]
+			description: ["Smelt your first products and prepare for metal progression."]
+			icon: { id: "minecraft:furnace" }
+			tasks: [{ id: "furnace_task", type: "item", item: { id: "minecraft:furnace" } }]
+		}
+	]
+}

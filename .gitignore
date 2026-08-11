@@ -1,0 +1,10 @@
+mods/*.jar
+*.jar
+*.mrpack
+*.zip
+exports/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.packwiz/

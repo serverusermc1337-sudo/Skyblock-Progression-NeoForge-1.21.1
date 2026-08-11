@@ -1,0 +1,49 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "00_awakening"
+	group: "awakening"
+	icon: { id: "minecraft:grass_block" }
+	id: "00_awakening"
+	order_index: 0
+	quest_links: []
+	quests: [
+		{
+			id: "wake_up"
+			title: "Wake on the Island"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"You have almost nothing."
+				"Every block matters. Follow the book."
+			]
+			icon: { id: "minecraft:book" }
+			tasks: [{ id: "wake_task", type: "checkmark" }]
+			rewards: [{ id: "wake_reward", type: "item", item: { id: "minecraft:oak_sapling", count: 1 } }]
+		}
+		{
+			id: "first_wood"
+			title: "First Wood"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["wake_up"]
+			description: ["Grow and harvest your first wood. Do not waste the sapling."]
+			icon: { id: "minecraft:oak_log" }
+			tasks: [{ id: "wood_task", type: "item", item: { id: "minecraft:oak_log" }, count: 8 }]
+			rewards: [{ id: "wood_reward", type: "item", item: { id: "minecraft:stick", count: 16 } }]
+		}
+		{
+			id: "basic_tools"
+			title: "Basic Tools"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["first_wood"]
+			description: ["Craft the first tools. Stone comes next."]
+			icon: { id: "minecraft:wooden_pickaxe" }
+			tasks: [
+				{ id: "axe_task", type: "item", item: { id: "minecraft:wooden_pickaxe" } }
+			]
+			rewards: [{ id: "tool_reward", type: "item", item: { id: "minecraft:apple", count: 3 } }]
+		}
+	]
+}

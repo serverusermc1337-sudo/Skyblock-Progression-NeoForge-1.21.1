@@ -1,0 +1,3 @@
+hash-format = "sha256"
+
+# Populate by running packwiz curseforge/modrinth install commands locally.

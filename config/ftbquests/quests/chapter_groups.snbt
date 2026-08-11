@@ -1,0 +1,17 @@
+{
+	default_quest_shape: ""
+	group_order: [
+		"awakening"
+		"resources"
+		"automation"
+		"expansion"
+		"endgame"
+	]
+	groups: [
+		{ id: "awakening", title: "Awakening" }
+		{ id: "resources", title: "Resources" }
+		{ id: "automation", title: "Automation" }
+		{ id: "expansion", title: "Expansion" }
+		{ id: "endgame", title: "Endgame" }
+	]
+}
