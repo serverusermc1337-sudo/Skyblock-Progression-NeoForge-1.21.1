@@ -2,46 +2,46 @@
 
 ## Chapter groups
 
-1. **Cold Start** — wake, understand the rule, boot the core
-2. **Stabilize** — altitude/power budget becomes manageable
-3. **Deck Expansion** — enlarge platform without killing stability
-4. **Wreck Protocol** — dock, scavenge, leave
-5. **Autonomous Fuel** — systems that keep the core alive without babysitting
-6. **Sky Layers** — move between altitudes / biomes / hazard bands
-7. **Industry Afloat** — factories that only run while stable
-8. **Branches** — optional magic / deep tech / combat
-9. **Bastion** — endgame permanent sky-fortress goals
+1. Cold Start
+2. Stabilize / Wreck Protocol entry
+3. Deck Expansion
+4. Autonomous Fuel
+5. Sky Layers
+6. Industry Afloat
+7. Branches
+8. Bastion
 
-## Chapter 0–1 — must be written first (15 quests target)
+## Cold Start + Stabilize = first 15 quests (implemented in SNBT)
 
-### Cold Start
-1. Wake on Deck
-2. Open the Logbook (quest book)
-3. Inspect the Levitation Core
-4. Restore minimal power
-5. Survive the first instability warning
-6. Secure a rim (don't fall)
-7. First renewable resource action
+### Cold Start (`00_cold_start.snbt`) — 7 quests
+1. Wake on the Deck
+2. Open the Logbook
+3. Inspect the Core
+4. Minimal Power
+5. First Warning
+6. Secure the Rim
+7. Life Support
 
-### Stabilize
-8. Build a dedicated fuel/kinetic feed
-9. Reach "Stable" state for X minutes
-10. Unlock basic storage on-deck
-11. Craft the Docking Hook / claim tool (whatever represents wreck interaction)
-12. Scan first wreck beacon
-13. Dock without brownout
-14. Scavenge wreck crate
-15. Return with hull plates / core fragment reward
+### Stabilize (`01_stabilize.snbt`) — 8 quests
+8. Dedicated Feed
+9. Stable State
+10. Deck Storage
+11. Docking Hook
+12. Scan the First Wreck
+13. Dock Without Brownout
+14. Scavenge the Crate
+15. Return to Deck 0
 
-If these 15 are not fun, stop adding mods.
+These are the mandatory first 15. Do not expand the modlist until this arc plays well.
 
-## Quest writing rules
+## Writing rules
 
-- Every early reward changes a **capability** (stability, power, docking, safety), not only item count
-- Say the rule in plain language in descriptions
-- Prefer checkmark + item + location-style tasks over pure grind
-- Hide later chapters until core is stable
+- Capability rewards over junk
+- Say the engine rule in plain language
+- Gate wrecks behind stability fantasy
+- Replace placeholder checkmarks with real item/location tasks as systems exist
 
-## Existing sample chapters in repo
+## Related docs
 
-Update sample SNBT over time to match Cold Start naming. Current samples are generic placeholders until you replace them in editing mode.
+- `docs/STABILITY_RULE.md`
+- `docs/ENGINE_DECK_0_LAYOUT.md`

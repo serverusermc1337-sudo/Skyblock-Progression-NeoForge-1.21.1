@@ -3,61 +3,118 @@
 	default_quest_shape: "square"
 	filename: "01_stabilize"
 	group: "stabilize"
-	icon: { id: "minecraft:compass" }
+	icon: {
+		id: "minecraft:compass"
+	}
 	id: "01_stabilize"
 	order_index: 1
-	quest_links: []
+	quest_links: [ ]
 	quests: [
 		{
-			id: "secure_rim"
-			title: "Secure the Rim"
+			id: "st01_dedicated_feed"
+			title: "Dedicated Feed"
 			x: 0.0d
 			y: 0.0d
 			description: [
-				"Build a safe edge."
-				"Most crews die to the void before they die to power failure."
-			]
-			icon: { id: "minecraft:cobblestone" }
-			tasks: [{ id: "rim_task", type: "checkmark" }]
-		}
-		{
-			id: "dedicated_feed"
-			title: "Dedicated Feed"
-			x: 1.5d
-			y: 0.0d
-			dependencies: ["secure_rim"]
-			description: [
-				"Stop powering the core by panic."
-				"Build a dedicated feed line — kinetic, fuel, or both."
+				"Stop feeding the core by panic."
+				"Build a dedicated power path: crank, burn, or kinetic line aimed at the core."
 			]
 			icon: { id: "minecraft:furnace" }
-			tasks: [{ id: "feed_task", type: "checkmark" }]
+			tasks: [ { id: "st01_t", type: "checkmark" } ]
 		}
 		{
-			id: "stable_state"
+			id: "st02_stable_state"
 			title: "Stable State"
-			x: 3.0d
+			x: 1.5d
 			y: 0.0d
-			dependencies: ["dedicated_feed"]
+			dependencies: ["st01_dedicated_feed"]
 			description: [
-				"Hold stability long enough to work."
-				"When the deck stops shuddering, you may expand."
+				"Hold STABLE long enough to work."
+				"If your status system is live, reach the stable threshold."
+				"If still Phase 0, confirm the feed runs without constant babysitting."
 			]
 			icon: { id: "minecraft:emerald" }
-			tasks: [{ id: "stable_task", type: "checkmark" }]
+			tasks: [ { id: "st02_t", type: "checkmark" } ]
+			rewards: [ { id: "st02_r", type: "item", item: { id: "minecraft:iron_ingot", count: 4 } } ]
 		}
 		{
-			id: "first_wreck_scan"
-			title: "First Wreck Scan"
+			id: "st03_deck_storage"
+			title: "Deck Storage"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["st02_stable_state"]
+			description: [
+				"Install real storage on-deck."
+				"A stable crew does not live out of the starter chest."
+			]
+			icon: { id: "minecraft:chest" }
+			tasks: [ { id: "st03_t", type: "item", item: { id: "minecraft:chest" }, count: 2 } ]
+		}
+		{
+			id: "st04_docking_tool"
+			title: "Docking Hook"
 			x: 4.5d
 			y: 0.0d
-			dependencies: ["stable_state"]
+			dependencies: ["st03_deck_storage"]
 			description: [
-				"Something is beaming on the horizon."
-				"Wrecks are how Engine Deck crews eat."
+				"Craft or claim the docking tool your pack uses for wreck interaction."
+				"Placeholder: any lead/tripwire/spyglass can stand in until a real item exists."
+			]
+			icon: { id: "minecraft:lead" }
+			tasks: [ { id: "st04_t", type: "item", item: { id: "minecraft:spyglass" } } ]
+		}
+		{
+			id: "st05_wreck_scan"
+			title: "Scan the First Wreck"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["st04_docking_tool"]
+			description: [
+				"Something is beaming beyond the void."
+				"Mark the first wreck beacon. Do not dock yet if status is CRITICAL."
 			]
 			icon: { id: "minecraft:spyglass" }
-			tasks: [{ id: "wreck_task", type: "checkmark" }]
+			tasks: [ { id: "st05_t", type: "checkmark" } ]
+		}
+		{
+			id: "st06_dock_clean"
+			title: "Dock Without Brownout"
+			x: 7.5d
+			y: 0.0d
+			dependencies: ["st05_wreck_scan"]
+			description: [
+				"Approach the wreck with STABLE power."
+				"If you brown out mid-dock, abort and restore the core."
+			]
+			icon: { id: "minecraft:compass" }
+			tasks: [ { id: "st06_t", type: "checkmark" } ]
+		}
+		{
+			id: "st07_scavenge"
+			title: "Scavenge the Crate"
+			x: 9.0d
+			y: 0.0d
+			dependencies: ["st06_dock_clean"]
+			description: [
+				"Pull the wreck crate."
+				"Hull plates and core fragments matter more than random junk."
+			]
+			icon: { id: "minecraft:barrel" }
+			tasks: [ { id: "st07_t", type: "checkmark" } ]
+			rewards: [ { id: "st07_r", type: "item", item: { id: "minecraft:iron_block", count: 1 } } ]
+		}
+		{
+			id: "st08_return"
+			title: "Return to Deck 0"
+			x: 10.5d
+			y: 0.0d
+			dependencies: ["st07_scavenge"]
+			description: [
+				"Bring the salvage home."
+				"A crew that cannot return is just another wreck."
+			]
+			icon: { id: "minecraft:ender_pearl" }
+			tasks: [ { id: "st08_t", type: "checkmark" } ]
 		}
 	]
 }

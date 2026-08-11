@@ -1,41 +1,35 @@
 # Suspended Engine
 
-**NeoForge 1.21.1** • A skyblock pack with a different rule
+**NeoForge 1.21.1**
 
-> Your island is not land. It is a machine that must stay airborne.
+> Your island is an engine. If it dies, you fall.
 
-If the core dies, you fall.
+## Locked identity
 
-This is **not** classic dirt-cube skyblock and not a kitchen-sink clone of FTB Skies / ATM Sky.
+**Suspended Engine** skyblock — airborne machine deck, power budget, wreck scavenging.
 
-## Identity (locked)
+## Implemented now
 
-**Option A — Suspended Engine**
+1. **Full first 15 quests** in `config/ftbquests` (Cold Start + Stabilize)
+2. **Engine Deck 0 layout** in `docs/ENGINE_DECK_0_LAYOUT.md`
+3. **Power/stability rule** in `docs/STABILITY_RULE.md`
+4. **Phase 1B datapack prototype** in `datapacks/suspended_engine_status/`
 
-- Spawn on a broken engine deck
-- Progression = restore power, stabilize altitude, expand the machine, dock to wrecks
-- Resources come from wreck scavenging, temporary nodes, and systems that only work while the island is stable
-- Quests teach the new rule first, items second
+## Start testing
 
-## Docs that matter
+1. CurseForge App → NeoForge 1.21.1, 10–16 GB RAM
+2. Install FTB Quests + Create + one sky/void approach
+3. Copy `config/ftbquests` into the instance
+4. Optional: copy status datapack into the world `datapacks/` folder
+5. Build Engine Deck 0 from the layout doc in creative, then export as structure
 
-| Doc | Purpose |
-|-----|--------|
-| `docs/IDENTITY.md` | One-sentence fantasy + non-negotiables |
-| `docs/STARTER_DECK.md` | What exists on spawn |
-| `docs/QUEST_TREE_DESIGN.md` | Full chapter plan for this identity |
-| `docs/CORE_MODLIST.md` | Mods that serve the engine fantasy |
-| `docs/CURSEFORGE_APP_TESTING.md` | How to test now |
-| `docs/CUSTOM_ISLANDS.md` | Worldgen / template choices for this design |
-| `docs/TROUBLESHOOTING.md` | Common failures |
+## Core docs
 
-## Build order
+- `docs/IDENTITY.md`
+- `docs/ENGINE_DECK_0_LAYOUT.md`
+- `docs/STABILITY_RULE.md`
+- `docs/QUEST_TREE_DESIGN.md`
+- `docs/CORE_MODLIST.md`
+- `docs/CURSEFORGE_APP_TESTING.md`
 
-1. CurseForge App → NeoForge 1.21.1 instance (10–16 GB)
-2. Install a **small** core that supports Create + quests + one sky/void approach
-3. Build/play the first 15 quests: boot core → fuel → stabilize → first wreck
-4. Only after that loop is fun, expand mods
-
-Mod count is secondary. The rule is primary.
-
-Repo skeleton remains Packwiz-ready for later export. No JARs in git.
+Make the first 15 quests fun before chasing mod count.

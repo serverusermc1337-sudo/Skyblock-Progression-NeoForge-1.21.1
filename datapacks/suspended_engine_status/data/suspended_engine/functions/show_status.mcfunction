@@ -1,0 +1,3 @@
+execute if score @s engine_power matches 40.. run title @s actionbar [{"text":"Engine: ","color":"gray"},{"text":"STABLE ","color":"green"},{"score":{"name":"@s","objective":"engine_power"},"color":"green"},{"text":"/100","color":"gray"}]
+execute if score @s engine_power matches 15..39 run title @s actionbar [{"text":"Engine: ","color":"gray"},{"text":"CRITICAL ","color":"gold"},{"score":{"name":"@s","objective":"engine_power"},"color":"gold"},{"text":"/100","color":"gray"}]
+execute if score @s engine_power matches ..14 run title @s actionbar [{"text":"Engine: ","color":"gray"},{"text":"BLACKOUT ","color":"red"},{"score":{"name":"@s","objective":"engine_power"},"color":"red"},{"text":"/100","color":"gray"}]

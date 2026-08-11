@@ -3,13 +3,15 @@
 	default_quest_shape: "square"
 	filename: "00_cold_start"
 	group: "cold_start"
-	icon: { id: "minecraft:redstone_block" }
+	icon: {
+		id: "minecraft:redstone_block"
+	}
 	id: "00_cold_start"
 	order_index: 0
-	quest_links: []
+	quest_links: [ ]
 	quests: [
 		{
-			id: "wake_deck"
+			id: "cs01_wake"
 			title: "Wake on the Deck"
 			x: 0.0d
 			y: 0.0d
@@ -19,47 +21,91 @@
 				"If the core dies, you fall."
 			]
 			icon: { id: "minecraft:book" }
-			tasks: [{ id: "wake_task", type: "checkmark" }]
-			rewards: [{ id: "wake_reward", type: "item", item: { id: "minecraft:bread", count: 8 } }]
+			tasks: [ { id: "cs01_t", type: "checkmark" } ]
+			rewards: [ { id: "cs01_r", type: "item", item: { id: "minecraft:bread", count: 4 } } ]
 		}
 		{
-			id: "open_logbook"
+			id: "cs02_logbook"
 			title: "Open the Logbook"
 			x: 1.5d
 			y: 0.0d
-			dependencies: ["wake_deck"]
+			dependencies: ["cs01_wake"]
 			description: [
-				"The logbook is your only intact system."
-				"It will tell you how to keep the deck in the air."
+				"The logbook is the only intact system."
+				"Use this quest book as the deck manual."
+				"It will teach you how to keep the hull in the air."
 			]
 			icon: { id: "minecraft:writable_book" }
-			tasks: [{ id: "log_task", type: "checkmark" }]
+			tasks: [ { id: "cs02_t", type: "checkmark" } ]
 		}
 		{
-			id: "inspect_core"
+			id: "cs03_inspect_core"
 			title: "Inspect the Core"
 			x: 3.0d
 			y: 0.0d
-			dependencies: ["open_logbook"]
+			dependencies: ["cs02_logbook"]
 			description: [
-				"Find the levitation core."
-				"It is inert. Your first job is not farming. Your first job is power."
+				"Find the levitation core at deck center (lodestone placeholder)."
+				"It is inert. Farming can wait. Power cannot."
 			]
 			icon: { id: "minecraft:lodestone" }
-			tasks: [{ id: "core_task", type: "checkmark" }]
+			tasks: [ { id: "cs03_t", type: "checkmark" } ]
 		}
 		{
-			id: "minimal_power"
+			id: "cs04_minimal_power"
 			title: "Minimal Power"
 			x: 4.5d
 			y: 0.0d
-			dependencies: ["inspect_core"]
+			dependencies: ["cs03_inspect_core"]
 			description: [
 				"Feed the core anything it will accept."
-				"Hand-crank, tiny generator, burned scrap — stability first."
+				"Hand power, scrap burn, or a tiny kinetic trickle."
+				"Status should leave BLACKOUT."
 			]
 			icon: { id: "minecraft:redstone" }
-			tasks: [{ id: "power_task", type: "checkmark" }]
+			tasks: [ { id: "cs04_t", type: "checkmark" } ]
+			rewards: [ { id: "cs04_r", type: "item", item: { id: "minecraft:coal", count: 8 } } ]
+		}
+		{
+			id: "cs05_first_warning"
+			title: "First Warning"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["cs04_minimal_power"]
+			description: [
+				"When power dips, the deck complains."
+				"Learn the warning. CRITICAL means stop expanding and feed the core."
+			]
+			icon: { id: "minecraft:bell" }
+			tasks: [ { id: "cs05_t", type: "checkmark" } ]
+		}
+		{
+			id: "cs06_secure_rim"
+			title: "Secure the Rim"
+			x: 7.5d
+			y: 0.0d
+			dependencies: ["cs05_first_warning"]
+			description: [
+				"Most crews die to the void before power failure."
+				"Build a full safe rim around Engine Deck 0."
+			]
+			icon: { id: "minecraft:cobblestone_wall" }
+			tasks: [ { id: "cs06_t", type: "checkmark" } ]
+			rewards: [ { id: "cs06_r", type: "item", item: { id: "minecraft:torch", count: 16 } } ]
+		}
+		{
+			id: "cs07_life_support"
+			title: "Life Support"
+			x: 9.0d
+			y: 0.0d
+			dependencies: ["cs06_secure_rim"]
+			description: [
+				"Keep the planter alive."
+				"One tree is a fuel line, a block line, and a future toolbox."
+			]
+			icon: { id: "minecraft:oak_sapling" }
+			tasks: [ { id: "cs07_t", type: "item", item: { id: "minecraft:oak_log" }, count: 8 } ]
+			rewards: [ { id: "cs07_r", type: "item", item: { id: "minecraft:oak_sapling", count: 2 } } ]
 		}
 	]
 }
