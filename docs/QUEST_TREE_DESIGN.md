@@ -1,39 +1,47 @@
-# FTB Quests design — Skyblock Progression
-
-## Design goals
-
-- Start from almost nothing
-- Every early reward must unlock a new resource vector
-- Parallel paths: resources, automation, combat/exploration, optional magic/tech
-- Midgame converts manual skyblock grind into systems
-- Endgame is compact, powerful island infrastructure + dimensional goals
+# Quest design — Suspended Engine
 
 ## Chapter groups
 
-1. **Awakening** — first platform, wood/cobble/water loop
-2. **Sieve & Soil** — basic resource generation
-3. **Food & Fiber** — sustainable food, saplings, animals
-4. **Metals & Power** — first real tools, early energy/rotation
-5. **Storage & Logistics** — stop inventory hell
-6. **Automation I** — cobble, ore, farm loops
-7. **Combat & Gear** — leave the island safely
-8. **Magic Branch** (optional)
-9. **Tech Branch** (optional / parallel)
-10. **Dimensions** — Nether/End/other with skyblock constraints
-11. **Automation II / Megabase**
-12. **Endgame Goals**
+1. **Cold Start** — wake, understand the rule, boot the core
+2. **Stabilize** — altitude/power budget becomes manageable
+3. **Deck Expansion** — enlarge platform without killing stability
+4. **Wreck Protocol** — dock, scavenge, leave
+5. **Autonomous Fuel** — systems that keep the core alive without babysitting
+6. **Sky Layers** — move between altitudes / biomes / hazard bands
+7. **Industry Afloat** — factories that only run while stable
+8. **Branches** — optional magic / deep tech / combat
+9. **Bastion** — endgame permanent sky-fortress goals
 
-## Progression principles
+## Chapter 0–1 — must be written first (15 quests target)
 
-- No quest should require leaving the island before the player has a reliable return method
-- Water, lava, wood, cobble, and mob drops are the first currencies
-- Quests should teach *systems*, not only "collect 64 X"
-- Reward functional unlocks (new generator, upgrade tier, travel item) over junk items
-- Keep early chapters short so players feel momentum
+### Cold Start
+1. Wake on Deck
+2. Open the Logbook (quest book)
+3. Inspect the Levitation Core
+4. Restore minimal power
+5. Survive the first instability warning
+6. Secure a rim (don't fall)
+7. First renewable resource action
 
-## Starter chapters in repo
+### Stabilize
+8. Build a dedicated fuel/kinetic feed
+9. Reach "Stable" state for X minutes
+10. Unlock basic storage on-deck
+11. Craft the Docking Hook / claim tool (whatever represents wreck interaction)
+12. Scan first wreck beacon
+13. Dock without brownout
+14. Scavenge wreck crate
+15. Return with hull plates / core fragment reward
 
-- `00_awakening.snbt` — first steps
-- `01_basic_loop.snbt` — cobble/wood/water loop
+If these 15 are not fun, stop adding mods.
 
-Expand in-game with editing mode. Do not try to hand-write 300 quests before testing the island loop.
+## Quest writing rules
+
+- Every early reward changes a **capability** (stability, power, docking, safety), not only item count
+- Say the rule in plain language in descriptions
+- Prefer checkmark + item + location-style tasks over pure grind
+- Hide later chapters until core is stable
+
+## Existing sample chapters in repo
+
+Update sample SNBT over time to match Cold Start naming. Current samples are generic placeholders until you replace them in editing mode.

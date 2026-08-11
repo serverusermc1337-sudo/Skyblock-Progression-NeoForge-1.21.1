@@ -1,51 +1,41 @@
-# Skyblock Progression
+# Suspended Engine
 
-**NeoForge 1.21.1** • Skyblock-focused progression pack with FTB Quests
+**NeoForge 1.21.1** • A skyblock pack with a different rule
 
-## Honest scope
+> Your island is not land. It is a machine that must stay airborne.
 
-This is a **working foundation**, not a finished 800-mod kitchen sink.
+If the core dies, you fall.
 
-A real skyblock pack with 800+ mods still requires:
-- compatibility testing
-- recipe balancing for void/island starts
-- quest writing across the full progression
-- performance tuning
+This is **not** classic dirt-cube skyblock and not a kitchen-sink clone of FTB Skies / ATM Sky.
 
-What you get here is the correct architecture so you can build that pack properly.
+## Identity (locked)
 
-## Primary testing method
+**Option A — Suspended Engine**
 
-**CurseForge App** — see `docs/CURSEFORGE_APP_TESTING.md`
+- Spawn on a broken engine deck
+- Progression = restore power, stabilize altitude, expand the machine, dock to wrecks
+- Resources come from wreck scavenging, temporary nodes, and systems that only work while the island is stable
+- Quests teach the new rule first, items second
 
-1. Create NeoForge **1.21.1** instance
-2. Allocate **10–16 GB** RAM
-3. Install core mods from `docs/CORE_MODLIST.md`
-4. Copy `config/ftbquests` into the instance
-5. Launch → `/ftbquests editing_mode true`
+## Docs that matter
 
-## What this repo contains
+| Doc | Purpose |
+|-----|--------|
+| `docs/IDENTITY.md` | One-sentence fantasy + non-negotiables |
+| `docs/STARTER_DECK.md` | What exists on spawn |
+| `docs/QUEST_TREE_DESIGN.md` | Full chapter plan for this identity |
+| `docs/CORE_MODLIST.md` | Mods that serve the engine fantasy |
+| `docs/CURSEFORGE_APP_TESTING.md` | How to test now |
+| `docs/CUSTOM_ISLANDS.md` | Worldgen / template choices for this design |
+| `docs/TROUBLESHOOTING.md` | Common failures |
 
-- Packwiz skeleton (`pack.toml`, `index.toml`)
-- Skyblock-oriented FTB Quests chapter design + starter chapters
-- Core mod guidance for skyblock progression
-- CurseForge export automation hooks
-- Troubleshooting
+## Build order
 
-## Practical order
+1. CurseForge App → NeoForge 1.21.1 instance (10–16 GB)
+2. Install a **small** core that supports Create + quests + one sky/void approach
+3. Build/play the first 15 quests: boot core → fuel → stabilize → first wreck
+4. Only after that loop is fun, expand mods
 
-1. Get a stable ~150–300 mod skyblock core running in CurseForge App
-2. Build the quest book around void → resources → automation → endgame
-3. Only then expand toward very large mod counts
-4. Mirror the stable list into Packwiz and export
+Mod count is secondary. The rule is primary.
 
-Chasing 800 mods before the island loop works is wasted effort.
-
-## Docs
-
-- `docs/CURSEFORGE_APP_TESTING.md`
-- `docs/QUEST_TREE_DESIGN.md`
-- `docs/CORE_MODLIST.md`
-- `docs/EXPANDING_TO_800.md`
-- `docs/AUTOMATED_EXPORT.md`
-- `docs/TROUBLESHOOTING.md`
+Repo skeleton remains Packwiz-ready for later export. No JARs in git.

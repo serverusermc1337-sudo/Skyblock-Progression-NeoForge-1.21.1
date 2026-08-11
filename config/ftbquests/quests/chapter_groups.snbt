@@ -1,17 +1,17 @@
 {
 	default_quest_shape: ""
 	group_order: [
-		"awakening"
-		"resources"
-		"automation"
-		"expansion"
-		"endgame"
+		"cold_start"
+		"stabilize"
+		"wrecks"
+		"industry"
+		"bastion"
 	]
 	groups: [
-		{ id: "awakening", title: "Awakening" }
-		{ id: "resources", title: "Resources" }
-		{ id: "automation", title: "Automation" }
-		{ id: "expansion", title: "Expansion" }
-		{ id: "endgame", title: "Endgame" }
+		{ id: "cold_start", title: "Cold Start" }
+		{ id: "stabilize", title: "Stabilize" }
+		{ id: "wrecks", title: "Wreck Protocol" }
+		{ id: "industry", title: "Industry Afloat" }
+		{ id: "bastion", title: "Bastion" }
 	]
 }

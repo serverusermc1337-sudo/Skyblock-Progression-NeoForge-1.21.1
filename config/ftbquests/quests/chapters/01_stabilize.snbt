@@ -1,0 +1,63 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "01_stabilize"
+	group: "stabilize"
+	icon: { id: "minecraft:compass" }
+	id: "01_stabilize"
+	order_index: 1
+	quest_links: []
+	quests: [
+		{
+			id: "secure_rim"
+			title: "Secure the Rim"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Build a safe edge."
+				"Most crews die to the void before they die to power failure."
+			]
+			icon: { id: "minecraft:cobblestone" }
+			tasks: [{ id: "rim_task", type: "checkmark" }]
+		}
+		{
+			id: "dedicated_feed"
+			title: "Dedicated Feed"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["secure_rim"]
+			description: [
+				"Stop powering the core by panic."
+				"Build a dedicated feed line — kinetic, fuel, or both."
+			]
+			icon: { id: "minecraft:furnace" }
+			tasks: [{ id: "feed_task", type: "checkmark" }]
+		}
+		{
+			id: "stable_state"
+			title: "Stable State"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["dedicated_feed"]
+			description: [
+				"Hold stability long enough to work."
+				"When the deck stops shuddering, you may expand."
+			]
+			icon: { id: "minecraft:emerald" }
+			tasks: [{ id: "stable_task", type: "checkmark" }]
+		}
+		{
+			id: "first_wreck_scan"
+			title: "First Wreck Scan"
+			x: 4.5d
+			y: 0.0d
+			dependencies: ["stable_state"]
+			description: [
+				"Something is beaming on the horizon."
+				"Wrecks are how Engine Deck crews eat."
+			]
+			icon: { id: "minecraft:spyglass" }
+			tasks: [{ id: "wreck_task", type: "checkmark" }]
+		}
+	]
+}

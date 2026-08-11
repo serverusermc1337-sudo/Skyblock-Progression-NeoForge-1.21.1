@@ -1,0 +1,65 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "00_cold_start"
+	group: "cold_start"
+	icon: { id: "minecraft:redstone_block" }
+	id: "00_cold_start"
+	order_index: 0
+	quest_links: []
+	quests: [
+		{
+			id: "wake_deck"
+			title: "Wake on the Deck"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"This is not an island."
+				"This is Engine Deck 0 — a hull fragment that still thinks it can fly."
+				"If the core dies, you fall."
+			]
+			icon: { id: "minecraft:book" }
+			tasks: [{ id: "wake_task", type: "checkmark" }]
+			rewards: [{ id: "wake_reward", type: "item", item: { id: "minecraft:bread", count: 8 } }]
+		}
+		{
+			id: "open_logbook"
+			title: "Open the Logbook"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["wake_deck"]
+			description: [
+				"The logbook is your only intact system."
+				"It will tell you how to keep the deck in the air."
+			]
+			icon: { id: "minecraft:writable_book" }
+			tasks: [{ id: "log_task", type: "checkmark" }]
+		}
+		{
+			id: "inspect_core"
+			title: "Inspect the Core"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["open_logbook"]
+			description: [
+				"Find the levitation core."
+				"It is inert. Your first job is not farming. Your first job is power."
+			]
+			icon: { id: "minecraft:lodestone" }
+			tasks: [{ id: "core_task", type: "checkmark" }]
+		}
+		{
+			id: "minimal_power"
+			title: "Minimal Power"
+			x: 4.5d
+			y: 0.0d
+			dependencies: ["inspect_core"]
+			description: [
+				"Feed the core anything it will accept."
+				"Hand-crank, tiny generator, burned scrap — stability first."
+			]
+			icon: { id: "minecraft:redstone" }
+			tasks: [{ id: "power_task", type: "checkmark" }]
+		}
+	]
+}

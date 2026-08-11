@@ -1,51 +1,45 @@
-# Core mod guidance — Skyblock Progression (NeoForge 1.21.1)
+# Core mod guidance — Suspended Engine
 
-This is a **theme checklist**, not a verified 800-mod dump.
+Install only what serves the airborne engine fantasy.
 
-Always confirm NeoForge 1.21.1 availability on CurseForge/Modrinth before installing.
-
-## Essentials
-- NeoForge 1.21.1
-- FTB Library / FTB Quests / FTB XMod Compat
+## Pillar 1 — Rule + quests
+- FTB Library
+- FTB Quests
+- FTB XMod Compat
 - JEI or EMI
-- Architectury + common libs as required
 
-## Skyblock resource backbone
-Look for maintained 1.21.1 NeoForge options in these categories:
-- Cobble generators / compact machines for generation
-- Sieves / barrels / crucibles / hammer chains (Ex Nihilo-style ports if available)
-- Dirt/water/lava manipulation utilities
-- Sapling / crop multiplication
-- Mob spawn control / cursed earth equivalents only if balanced
+## Pillar 2 — Machine identity
+- **Create** (mandatory for this identity)
+- A small set of Create addons that help power, movement, or logistics
+- Avoid dumping every Create addon on day one
 
-## Automation
-- Create (excellent for visible skyblock factories)
-- Pipe/logistics mods available for 1.21.1
-- Later: AE2 or Refined Storage
-- Optional heavy tech: Mekanism or Oritech
+## Pillar 3 — Sky/void presentation (pick ONE primary)
+- Sky Archipelago **or**
+- Project Island **or**
+- Sky Islands **or**
+- Void datapack (Standard SkyBlock / Skyblock Infinite) as temporary test bed
 
-## Storage
-- Sophisticated Backpacks
-- Functional Storage / drawers
-- Tom's Simple Storage or equivalent
+Do not stack all worldgen island mods.
 
-## Farming / food
-- Farmer's Delight + compat addons
-- Crop growth / watering utilities carefully
+## Pillar 4 — Custom starter deck (when ready)
+- Haven Skyblock Builder **or** SBC Void Skyblock **or** Sky Islands templates
+- Your exported engine-deck `.nbt`
 
-## Exploration / combat support
-- Waystones or equivalent return tools
-- One structure/dungeon suite only after leaving-island is intended
-- Cataclysm / boss mods only in mid/late chapters
-
-## Performance
+## Pillar 5 — Performance / QoL
 - Embeddium or equivalent
 - FerriteCore
 - ModernFix
-- Entity Culling
+- Jade
+- AppleSkin
+- Mouse Tweaks
 
-## Do not do on day one
-- Install every tech suite at once
-- Install every magic suite at once
-- Install 20 structure packs on a skyblock island pack
-- Chase 800 mods before the first automated cobble/ore loop works
+## Later branches only
+- AE2 / Refined Storage after autonomous fuel exists
+- Mekanism / Oritech only if they support fortress-scale power fantasy without deleting the fuel tension
+- Magic packs only as optional branch after Bastion foundations
+
+## Banned early
+- Full classic Ex Nihilo grind as the identity (optional later resource helper, not the fantasy)
+- 10 structure packs
+- Multiple magic suites
+- "All the mods" thinking
